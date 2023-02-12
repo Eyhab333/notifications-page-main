@@ -1,0 +1,302 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+body {
+  background: #f7fafd;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+main {
+  background: #ffffff;
+  box-shadow: 0px 20px 60px rgba(73, 97, 168, 0.05);
+  border-radius: 15px;
+}
+
+h1 {
+  font-weight: 800;
+  color: #1c202b;
+}
+
+.unread-counter {
+  background: #0a327b;
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: 6px;
+  height: 1.5625rem;
+  width: 2rem;
+  margin-left: 0.6875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  font-weight: 500;
+  color: #5e6778;
+  background-color: transparent;
+}
+
+.name,
+.bonus-info {
+  font-weight: 800;
+}
+
+.status,
+.ago {
+  font-weight: 500;
+}
+
+.name {
+  color: #1c202b;
+}
+
+.status,
+.bonus-info {
+  color: #5e6778;
+}
+
+.ago {
+  color: #939cad;
+}
+
+.unread p:first-child {
+  position: relative;
+}
+
+.unread p:first-child::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  background-image: url(./assets/images/icon-unread.svg);
+  background-repeat: no-repeat;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.375rem;
+}
+
+.unread {
+  background: #f7fafd;
+}
+
+.notification {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.private-message {
+  border: 1px solid #dde7ee;
+  border-radius: 5px;
+}
+
+.private-message p {
+  font-weight: 500;
+  color: #5e6778;
+}
+
+.img-chess-container {
+  justify-self: end;
+}
+
+/*##### for-phone-only ##########*/
+@media (max-width: 599px) {
+  body {
+    padding-top: 1.5rem;
+  }
+  main {
+    width: 100%;
+    padding: 2.0625rem 1.875rem 0rem 2rem;
+    margin: 0 auto;
+  }
+  .notifications--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  .notifications--header h1 {
+    font-size: 1.25rem;
+  }
+  .notifications--header button {
+    font-size: 0.875rem;
+  }
+  .notification {
+    margin-bottom: 0.5rem;
+    padding: 1rem;
+    padding-right: 0.4375rem;
+  }
+  .grid-container {
+    grid-template-columns: 3.25rem 1fr;
+  }
+  .img-container {
+    width: 2.4375rem;
+  }
+  .text-container {
+    max-width: 15.5625rem;
+  }
+  .name,
+  .status,
+  .bonus-info,
+  .ago {
+    font-size: 0.875rem;
+  }
+  .flex {
+    align-items: flex-end;
+    justify-content: flex-start;
+  }
+  .chess-club {
+    font-weight: 800;
+    font-size: 0.875rem;
+    color: #0a327b;
+  }
+  .private-message {
+    width: 98%;
+    padding: 1rem;
+    padding-right: 7px;
+    margin-top: 0.75rem;
+  }
+  .private-message p {
+    font-size: 0.875rem;
+    line-height: 1.1025rem;
+  }
+  .img-chess-container {
+    width: 2.4375rem;
+  }
+  .kimberly-speacial-grid {
+    grid-template-columns: 3.25rem 1fr 4.125rem;
+  }
+}
+/*############ for-tablet-portrait-up ##############*/
+@media (min-width: 600px) {
+  body {
+    padding: 3.9375rem 9.5625rem 0px 9.5625rem;
+  }
+  main {
+    width: 45.625rem;
+    padding: 2.0625rem 1.875rem 0rem 2rem;
+    margin: 0 auto;
+  }
+  .notifications--header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.9375rem;
+  }
+  .notifications--header h1 {
+    font-size: 1.5rem;
+  }
+  .notifications--header button {
+    font-size: 1rem;
+  }
+  .notification {
+    margin-bottom: 0.5rem;
+    padding-top: 1.125rem;
+    padding-bottom: 1.0625rem;
+    padding-left: 1.25rem;
+  }
+  .grid-container {
+    grid-template-columns: 4rem 1fr;
+  }
+  .img-container {
+    width: 2.5rem;
+  }
+  .name,
+  .status,
+  .icon-unread,
+  .ago {
+    font-size: 1rem;
+  }
+  .chess-club {
+    font-weight: 800;
+    font-size: 1rem;
+    color: #0a327b;
+  }
+  .private-message {
+    width: 95.5%;
+    padding: 1.25rem;
+    padding-top: 1.0625rem;
+    margin-top: 0.8125rem;
+  }
+  .private-message p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+  .img-chess-container {
+    width: 2.8125rem;
+  }
+  .kimberly-speacial-grid {
+    grid-template-columns: 4rem 1fr 13.9375rem;
+  }
+}/*# sourceMappingURL=style.css.map */

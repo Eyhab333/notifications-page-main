@@ -117,6 +117,18 @@ button {
   color: #1c202b;
 }
 
+.name:hover,
+#mark-all-as-read:hover,
+.chess-club:hover,
+.bonus-info:hover {
+  color: #0a327b;
+  cursor: pointer;
+}
+
+.private-message:hover {
+  background: #E5EFFA;
+}
+
 .status,
 .bonus-info {
   color: #5e6778;
